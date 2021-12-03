@@ -16,5 +16,15 @@ namespace SystemExpert
         {
             InitializeComponent();
         }
+
+        private void YesBtn_Click(object sender, EventArgs e)
+        {
+            Question.Text = "Вы хохол";
+        }
+
+        private void NoBtn_Click(object sender, EventArgs e)
+        {
+            Question.Text = "Да кому ты пиздишь";
+        }
     }
 }

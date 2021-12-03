@@ -29,24 +29,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.Question = new System.Windows.Forms.Label();
+            this.YesBtn = new System.Windows.Forms.Button();
+            this.NoBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // Question
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(318, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.Question.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Question.AutoSize = true;
+            this.Question.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Question.Location = new System.Drawing.Point(234, 9);
+            this.Question.Name = "Question";
+            this.Question.Size = new System.Drawing.Size(300, 45);
+            this.Question.TabIndex = 0;
+            this.Question.Text = "Проверка на хохла";
+            // 
+            // YesBtn
+            // 
+            this.YesBtn.Location = new System.Drawing.Point(337, 184);
+            this.YesBtn.Name = "YesBtn";
+            this.YesBtn.Size = new System.Drawing.Size(75, 23);
+            this.YesBtn.TabIndex = 1;
+            this.YesBtn.Text = "Да";
+            this.YesBtn.UseVisualStyleBackColor = true;
+            this.YesBtn.Click += new System.EventHandler(this.YesBtn_Click);
+            // 
+            // NoBtn
+            // 
+            this.NoBtn.Location = new System.Drawing.Point(337, 282);
+            this.NoBtn.Name = "NoBtn";
+            this.NoBtn.Size = new System.Drawing.Size(75, 23);
+            this.NoBtn.TabIndex = 2;
+            this.NoBtn.Text = "Нет";
+            this.NoBtn.UseVisualStyleBackColor = true;
+            this.NoBtn.Click += new System.EventHandler(this.NoBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.NoBtn);
+            this.Controls.Add(this.YesBtn);
+            this.Controls.Add(this.Question);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -56,6 +82,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Question;
+        private System.Windows.Forms.Button YesBtn;
+        private System.Windows.Forms.Button NoBtn;
     }
 }
