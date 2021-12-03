@@ -6,7 +6,7 @@ namespace SystemExpert.Entities
     {
         public int Id { get; set; }
         
-        public string Name { get; set; }
+        public string Name { get; set; }//проверка
         
         public List<Genre> ChildGenres { get; set; }
         public int? ParentGenreId { get; set; }
