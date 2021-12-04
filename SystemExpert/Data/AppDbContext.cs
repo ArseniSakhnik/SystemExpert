@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using SystemExpert.Entities;
+using SystemExpert.Enums;
 
 namespace SystemExpert.Data
 {
@@ -75,6 +76,7 @@ namespace SystemExpert.Data
                 {
                     Id = 7,
                     Name = "Гранж",
+                    FeatureId = Feature.Расслаблаяющая,
                     ParentGenreId = 4
                 },
                 new Genre
