@@ -7,7 +7,7 @@ namespace SystemExpert.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public Feature FeatureId { get; set; }
+        public Feature FeatureId { get; set; } = Feature.Нет;
 
         public List<Genre> ChildGenres { get; set; }
         public int? ParentGenreId { get; set; }
