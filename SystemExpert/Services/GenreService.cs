@@ -1,12 +1,9 @@
-﻿using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using ExpertSystem.Entities;
+﻿using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SystemExpert.Data;
 using SystemExpert.Entities;
 
-namespace ExpertSystem.Services
+namespace SystemExpert.Services
 {
     public static class GenreService
     {

@@ -11,5 +11,7 @@ namespace SystemExpert.Entities
         public List<Genre> ChildGenres { get; set; }
         public int? ParentGenreId { get; set; }
         public Genre ParentGenre { get; set; }
+        
+        public List<MusicalGroup> Groups { get; set; }
     }
 }

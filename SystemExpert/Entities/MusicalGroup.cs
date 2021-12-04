@@ -1,6 +1,4 @@
-﻿using SystemExpert.Entities;
-
-namespace ExpertSystem.Entities
+﻿namespace SystemExpert.Entities
 {
     public class MusicalGroup
     {
