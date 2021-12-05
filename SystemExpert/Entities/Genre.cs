@@ -1,4 +1,5 @@
-﻿using SystemExpert.Enums;
+﻿using System.Collections.Generic;
+using SystemExpert.Enums;
 
 namespace SystemExpert.Entities
 {

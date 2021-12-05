@@ -31,9 +31,6 @@ namespace SystemExpert.Data
                 .WithOne(childGenre => childGenre.ParentGenre)
                 .HasForeignKey(genre => genre.ParentGenreId);
 
-            var index = 5;
-            var parentId = 2;
-            
             modelBuilder.Entity<Genre>().HasData(new List<Genre>
             {
                 new Genre
@@ -302,108 +299,108 @@ namespace SystemExpert.Data
                 new Genre
                 {
                     Id = 39,
-                    Name = "Реп"
+                    Name = "Реп",
                     ParentGenreId = null
                 },
                 new Genre
                 {
                     Id = 40,
-                    Name = "Региональный"
+                    Name = "Региональный",
                     ParentGenreId = 39
                 },
                 new Genre
                 {
                     Id = 41,
-                    Name = "Hard-Core"
+                    Name = "Hard-Core",
                     ParentGenreId = 39
                 },
                 new Genre
                 {
                     Id = 42,
-                    Name = "Трэп"
+                    Name = "Трэп",
                     ParentGenreId = 40
                 },
                 new Genre
                 {
                     Id = 43,
-                    Name = "Русский"
+                    Name = "Русский",
                     ParentGenreId = 40,
                     FeatureId = Feature.Народная
                 },
                 new Genre
                 {
                     Id = 44,
-                    Name = "Южный"
+                    Name = "Южный",
                     ParentGenreId = 40,
                     FeatureId = Feature.Экстрим
                 },
                 new Genre
                 {
                     Id = 45,
-                    Name = "Восточный"
+                    Name = "Восточный",
                     ParentGenreId = 40,
                     FeatureId = Feature.Классика
                 },
                 new Genre
                 {
                     Id = 46,
-                    Name = "Западный"
+                    Name = "Западный",
                     ParentGenreId = 40,
                     FeatureId = Feature.Политика
                 },
                 new Genre
                 {
                     Id = 47,
-                    Name = "Мемфис"
+                    Name = "Мемфис",
                     ParentGenreId = 41,
                     FeatureId = Feature.Искаженная
                 },
                 new Genre
                 {
                     Id = 48,
-                    Name = "Грязный"
+                    Name = "Грязный",
                     ParentGenreId = 41,
                     FeatureId = Feature.Карикатура
                 },
                 new Genre
                 {
                     Id = 49,
-                    Name = "Хоррор"
+                    Name = "Хоррор",
                     ParentGenreId = 41,
                     FeatureId = Feature.Страшная
                 },
                 new Genre
                 {
                     Id = 50,
-                    Name = "Ганстерский"
+                    Name = "Ганстерский",
                     ParentGenreId = 41,
                     FeatureId = Feature.Экстрим
                 },
                 new Genre
                 {
                     Id = 51,
-                    Name = "Дрилл"
+                    Name = "Дрилл",
                     ParentGenreId = 42,
                     FeatureId = Feature.Страшная
                 },
                 new Genre
                 {
                     Id = 52,
-                    Name = "Латино-трэп"
+                    Name = "Латино-трэп",
                     ParentGenreId = 42,
                     FeatureId = Feature.Народная
                 },
                 new Genre
                 {
                     Id = 53,
-                    Name = "Tread"
+                    Name = "Tread",
                     ParentGenreId = 42,
                     FeatureId = Feature.Разнообразная
                 },
                 new Genre
                 {
                     Id = 54,
-                    Name = "Фонк"
+                    Name = "Фонк",
                     ParentGenreId = 42,
                     FeatureId = Feature.Расслабляющая
                 }
