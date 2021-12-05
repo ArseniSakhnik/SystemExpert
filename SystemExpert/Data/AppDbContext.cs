@@ -1,4 +1,7 @@
-﻿using SystemExpert.Entities;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using SystemExpert.Entities;
 using SystemExpert.Enums;
 
 namespace SystemExpert.Data
@@ -28,10 +31,9 @@ namespace SystemExpert.Data
                 .WithOne(childGenre => childGenre.ParentGenre)
                 .HasForeignKey(genre => genre.ParentGenreId);
 
-            // что такое индекс и зачем???
-            int index = 5;
-            int parentId = 2;
-
+            var index = 5;
+            var parentId = 2;
+            
             modelBuilder.Entity<Genre>().HasData(new List<Genre>
             {
                 new Genre
@@ -58,6 +60,7 @@ namespace SystemExpert.Data
                     Name = "Альтернативный рок",
                     ParentGenreId = 1
                 },
+
                 new Genre
                 {
                     Id = 5,
@@ -68,101 +71,104 @@ namespace SystemExpert.Data
                 new Genre
                 {
                     Id = 6,
+                    Name = "Индастриал-метал",
+                    ParentGenreId = 2,
+                    FeatureId = Feature.Искаженная
+                },
+                new Genre
+                {
+                    Id = 7,
+                    Name = "Ню-метал",
+                    ParentGenreId = 2,
+                    FeatureId = Feature.Разнообразная
+                },
+                new Genre
+                {
+                    Id = 8,
+                    Name = "Фолк-метал",
+                    ParentGenreId = 2,
+                    FeatureId = Feature.Народная
+                },
+                new Genre
+                {
+                    Id = 9,
+                    Name = "Блэк-метал",
+                    ParentGenreId = 2,
+                    FeatureId = Feature.Экстрим
+                },
+
+                new Genre
+                {
+                    Id = 10,
                     Name = "Ска-панк",
                     ParentGenreId = 3,
                     FeatureId = Feature.Политика
                 },
                 new Genre
                 {
-                    Id = 7,
+                    Id = 11,
+                    Name = "Хоррор-панк",
+                    ParentGenreId = 3,
+                    FeatureId = Feature.Страшная
+                },
+                new Genre
+                {
+                    Id = 12,
+                    Name = "Фолк-панк",
+                    ParentGenreId = 3,
+                    FeatureId = Feature.Народная
+                },
+                new Genre
+                {
+                    Id = 13,
+                    Name = "Арт-панк",
+                    ParentGenreId = 3,
+                    FeatureId = Feature.Искусство
+                },
+                new Genre
+                {
+                    Id = 14,
+                    Name = "Пост-панк",
+                    ParentGenreId = 3,
+                    FeatureId = Feature.Разнообразная
+                },
+
+                new Genre
+                {
+                    Id = 15,
                     Name = "Гранж",
                     ParentGenreId = 4,
                     FeatureId = Feature.Искаженная
                 },
                 new Genre
                 {
-                    Id = 8,
-                    Name = "Индастриал-метал",
-                    ParentGenreId = 5,
-                    FeatureId = Feature.Искаженная
-                },
-                new Genre
-                {
-                    Id = 9,
-                    Name = "Хоррор-панк",
-                    ParentGenreId = 6,
-                    FeatureId = Feature.Страшная
-                },
-                new Genre
-                {
-                    Id = 10,
-                    Name = "Индастриал-рок",
-                    ParentGenreId = 7,
-                    FeatureId = Feature.Разнообразная
-                },
-                new Genre
-                {
-                    Id = 11,
-                    Name = "Ню-метал",
-                    ParentGenreId = 8,
-                    FeatureId = Feature.Разнообразная
-                },
-                new Genre
-                {
-                    Id = 12,
-                    Name = "Фолк-панк",
-                    ParentGenreId = 9,
-                    FeatureId = Feature.Народная
-                },
-                new Genre
-                {
-                    Id = 13,
-                    Name = "Поп-панк",
-                    ParentGenreId = 10,
-                    FeatureId = Feature.Раслабляющая
-                },
-                new Genre
-                {
-                    Id = 14,
-                    Name = "Фолк-метал",
-                    ParentGenreId = 11,
-                    FeatureId = Feature.Народная
-                },
-                new Genre
-                {
-                    Id = 15,
-                    Name = "Арт-панк",
-                    ParentGenreId = 12,
-                    FeatureId = Feature.Искусство
-                },
-                new Genre
-                {
                     Id = 16,
-                    Name = "Шугейзинг",
-                    ParentGenreId = 13,
-                    FeatureId = Feature.Раслабляющая
+                    Name = "Индастриал-рок",
+                    ParentGenreId = 4,
+                    FeatureId = Feature.Разнообразная
                 },
                 new Genre
                 {
                     Id = 17,
-                    Name = "Блэк-метал",
-                    ParentGenreId = 14,
-                    FeatureId = Feature.Экстрим
+                    Name = "Поп-панк",
+                    ParentGenreId = 4,
+                    FeatureId = Feature.Расслабляющая
                 },
                 new Genre
                 {
                     Id = 18,
-                    Name = "Пост-панк",
-                    ParentGenreId = 15,
-                    FeatureId = Feature.Разнообразная
+                    Name = "Шугейзинг",
+                    ParentGenreId = 4,
+                    FeatureId = Feature.Грустная
                 },
                 new Genre
                 {
                     Id = 19,
                     Name = "Мэдчестер",
-                    ParentGenreId = 16,
+                    ParentGenreId = 4,
                     FeatureId = Feature.Классика
                 },
+
                 new Genre
                 {
                     Id = 20,
@@ -174,7 +180,7 @@ namespace SystemExpert.Data
                     Id = 21,
                     Name = "Транс",
                     ParentGenreId = 20,
-                    FeatureId = Feature.Раслабляющая
+                    FeatureId = Feature.Расслабляющая
                 },
                 new Genre
                 {
@@ -200,7 +206,7 @@ namespace SystemExpert.Data
                     Id = 25,
                     Name = "Гоа-транс",
                     ParentGenreId = 21,
-                    FeatureId = Feature.Раслабляющая
+                    FeatureId = Feature.Расслабляющая
                 },
                 new Genre
                 {
@@ -277,7 +283,7 @@ namespace SystemExpert.Data
                     Id = 36,
                     Name = "Дип-хаус",
                     ParentGenreId = 23,
-                    FeatureId = Feature.Раслабляющая
+                    FeatureId = Feature.Расслабляющая
                 },
                 new Genre
                 {
@@ -296,110 +302,110 @@ namespace SystemExpert.Data
                 new Genre
                 {
                     Id = 39,
-                    Name = "Реп",
-                    ParentGenreId = Null
+                    Name = "Реп"
+                    ParentGenreId = null
                 },
                 new Genre
                 {
                     Id = 40,
-                    Name = "Региональный",
+                    Name = "Региональный"
                     ParentGenreId = 39
                 },
                 new Genre
                 {
                     Id = 41,
-                    Name = "Hard-Core",
+                    Name = "Hard-Core"
                     ParentGenreId = 39
                 },
                 new Genre
                 {
                     Id = 42,
-                    Name = "Трэп",
+                    Name = "Трэп"
                     ParentGenreId = 40
                 },
                 new Genre
                 {
                     Id = 43,
-                    Name = "Русский",
+                    Name = "Русский"
                     ParentGenreId = 40,
                     FeatureId = Feature.Народная
                 },
                 new Genre
                 {
                     Id = 44,
-                    Name = "Южный",
+                    Name = "Южный"
                     ParentGenreId = 40,
                     FeatureId = Feature.Экстрим
                 },
                 new Genre
                 {
                     Id = 45,
-                    Name = "Восточный",
+                    Name = "Восточный"
                     ParentGenreId = 40,
                     FeatureId = Feature.Классика
                 },
                 new Genre
                 {
                     Id = 46,
-                    Name = "Западный",
+                    Name = "Западный"
                     ParentGenreId = 40,
                     FeatureId = Feature.Политика
                 },
                 new Genre
                 {
                     Id = 47,
-                    Name = "Мемфис",
+                    Name = "Мемфис"
                     ParentGenreId = 41,
                     FeatureId = Feature.Искаженная
                 },
                 new Genre
                 {
                     Id = 48,
-                    Name = "Грязный",
+                    Name = "Грязный"
                     ParentGenreId = 41,
                     FeatureId = Feature.Карикатура
                 },
                 new Genre
                 {
                     Id = 49,
-                    Name = "Хоррор",
+                    Name = "Хоррор"
                     ParentGenreId = 41,
                     FeatureId = Feature.Страшная
                 },
                 new Genre
                 {
                     Id = 50,
-                    Name = "Ганстерский",
+                    Name = "Ганстерский"
                     ParentGenreId = 41,
                     FeatureId = Feature.Экстрим
                 },
                 new Genre
                 {
                     Id = 51,
-                    Name = "Дрилл",
+                    Name = "Дрилл"
                     ParentGenreId = 42,
                     FeatureId = Feature.Страшная
                 },
                 new Genre
                 {
                     Id = 52,
-                    Name = "Латино-трэп",
+                    Name = "Латино-трэп"
                     ParentGenreId = 42,
                     FeatureId = Feature.Народная
                 },
                 new Genre
                 {
                     Id = 53,
-                    Name = "Tread",
+                    Name = "Tread"
                     ParentGenreId = 42,
                     FeatureId = Feature.Разнообразная
                 },
                 new Genre
                 {
                     Id = 54,
-                    Name = "Фонк",
+                    Name = "Фонк"
                     ParentGenreId = 42,
-                    FeatureId = Feature.Раслабляющая
+                    FeatureId = Feature.Расслабляющая
                 }
             });
         }
