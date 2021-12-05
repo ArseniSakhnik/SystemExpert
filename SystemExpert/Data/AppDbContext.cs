@@ -60,6 +60,7 @@ namespace SystemExpert.Data
                     Name = "Альтернативный рок",
                     ParentGenreId = 1
                 },
+
                 new Genre
                 {
                     Id = 5,
@@ -70,101 +71,104 @@ namespace SystemExpert.Data
                 new Genre
                 {
                     Id = 6,
+                    Name = "Индастриал-метал",
+                    ParentGenreId = 2,
+                    FeatureId = Feature.Искаженная
+                },
+                new Genre
+                {
+                    Id = 7,
+                    Name = "Ню-метал",
+                    ParentGenreId = 2,
+                    FeatureId = Feature.Разнообразная
+                },
+                new Genre
+                {
+                    Id = 8,
+                    Name = "Фолк-метал",
+                    ParentGenreId = 2,
+                    FeatureId = Feature.Народная
+                },
+                new Genre
+                {
+                    Id = 9,
+                    Name = "Блэк-метал",
+                    ParentGenreId = 2,
+                    FeatureId = Feature.Экстрим
+                },
+
+                new Genre
+                {
+                    Id = 10,
                     Name = "Ска-панк",
                     ParentGenreId = 3,
                     FeatureId = Feature.Политика
                 },
                 new Genre
                 {
-                    Id = 7,
+                    Id = 11,
+                    Name = "Хоррор-панк",
+                    ParentGenreId = 3,
+                    FeatureId = Feature.Страшная
+                },
+                new Genre
+                {
+                    Id = 12,
+                    Name = "Фолк-панк",
+                    ParentGenreId = 3,
+                    FeatureId = Feature.Народная
+                },
+                new Genre
+                {
+                    Id = 13,
+                    Name = "Арт-панк",
+                    ParentGenreId = 3,
+                    FeatureId = Feature.Искусство
+                },
+                new Genre
+                {
+                    Id = 14,
+                    Name = "Пост-панк",
+                    ParentGenreId = 3,
+                    FeatureId = Feature.Разнообразная
+                },
+
+                new Genre
+                {
+                    Id = 15,
                     Name = "Гранж",
                     ParentGenreId = 4,
                     FeatureId = Feature.Искаженная
                 },
                 new Genre
                 {
-                    Id = 8,
-                    Name = "Индастриал-метал",
-                    ParentGenreId = 5,
-                    FeatureId = Feature.Искаженная
-                },
-                new Genre
-                {
-                    Id = 9,
-                    Name = "Хоррор-панк",
-                    ParentGenreId = 6,
-                    FeatureId = Feature.Страшная
-                },
-                new Genre
-                {
-                    Id = 10,
-                    Name = "Индастриал-рок",
-                    ParentGenreId = 7,
-                    FeatureId = Feature.Разнообразная
-                },
-                new Genre
-                {
-                    Id = 11,
-                    Name = "Ню-метал",
-                    ParentGenreId = 8,
-                    FeatureId = Feature.Разнообразная
-                },
-                new Genre
-                {
-                    Id = 12,
-                    Name = "Фолк-панк",
-                    ParentGenreId = 9,
-                    FeatureId = Feature.Народная
-                },
-                new Genre
-                {
-                    Id = 13,
-                    Name = "Поп-панк",
-                    ParentGenreId = 10,
-                    FeatureId = Feature.Раслабляющая
-                },
-                new Genre
-                {
-                    Id = 14,
-                    Name = "Фолк-метал",
-                    ParentGenreId = 11,
-                    FeatureId = Feature.Народная
-                },
-                new Genre
-                {
-                    Id = 15,
-                    Name = "Арт-панк",
-                    ParentGenreId = 12,
-                    FeatureId = Feature.Искусство
-                },
-                new Genre
-                {
                     Id = 16,
-                    Name = "Шугейзинг",
-                    ParentGenreId = 13,
-                    FeatureId = Feature.Раслабляющая
+                    Name = "Индастриал-рок",
+                    ParentGenreId = 4,
+                    FeatureId = Feature.Разнообразная
                 },
                 new Genre
                 {
                     Id = 17,
-                    Name = "Блэк-метал",
-                    ParentGenreId = 14,
-                    FeatureId = Feature.Экстрим
+                    Name = "Поп-панк",
+                    ParentGenreId = 4,
+                    FeatureId = Feature.Раслабляющая
                 },
                 new Genre
                 {
                     Id = 18,
-                    Name = "Пост-панк",
-                    ParentGenreId = 15,
-                    FeatureId = Feature.Разнообразная
+                    Name = "Шугейзинг",
+                    ParentGenreId = 4,
+                    FeatureId = Feature.Грустная
                 },
                 new Genre
                 {
                     Id = 19,
                     Name = "Мэдчестер",
-                    ParentGenreId = 16,
+                    ParentGenreId = 4,
                     FeatureId = Feature.Классика
                 },
+
                 new Genre
                 {
                     Id = 20,
