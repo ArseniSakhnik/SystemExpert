@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SystemExpert",
-    "\\SystemExpert\\Data",
-    "\\SystemExpert\\Entities"
+    "\\.idea",
+    "\\SystemExpert"
   ],
-  "SelectedNode": "\\SystemExpert\\Data\\AppDbContext.cs",
+  "SelectedNode": "\\SystemExpert\\SystemExpert.csproj",
   "PreviewInSolutionExplorer": false
 }
