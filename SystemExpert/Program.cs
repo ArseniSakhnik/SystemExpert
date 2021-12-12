@@ -16,11 +16,8 @@ namespace SystemExpert
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-        static async Task Main()
+        static void Main()
         {
-            var genre = await GenreService.GetGenreByParent(GenreEnum.Поп);
-            genre = await GenreService.GetGenreByParent(GenreEnum.Реп);
-            genre = await GenreService.GetGenreByParent(GenreEnum.Рок);
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
