@@ -942,5 +942,14 @@ namespace SystemExpert.Services
                 .Select(genre => genre.Name)
                 .ToList();
         }
+
+        public static List<string> GetCurrentGenreGroups(string name)
+        {
+            return CurrentGenres
+                .First(genre => genre.Name == name)
+                .Groups
+                .Select(group => group.Name)
+                .ToList();
+        }
     }
 }
