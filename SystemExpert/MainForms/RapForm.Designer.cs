@@ -145,6 +145,7 @@ namespace SystemExpert.MainForms
             this.Controls.Add(this.question1_groupBox);
             this.Name = "RapForm";
             this.Text = "RapForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RapForm_FormClosed);
             this.question2_groupBox.ResumeLayout(false);
             this.question2_groupBox.PerformLayout();
             this.question1_groupBox.ResumeLayout(false);

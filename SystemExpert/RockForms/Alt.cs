@@ -17,5 +17,10 @@ namespace SystemExpert
             InitializeComponent();
             mainform = t_mainform;
         }
+
+        private void Alt_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            mainform.Show();
+        }
     }
 }

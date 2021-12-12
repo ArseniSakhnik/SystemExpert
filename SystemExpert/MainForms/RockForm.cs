@@ -64,5 +64,10 @@ namespace SystemExpert
             alt.Show();
             this.Close();
         }
+
+        private void RockForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            mainform.Show();
+        }
     }
 }

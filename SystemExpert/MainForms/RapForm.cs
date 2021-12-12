@@ -55,5 +55,9 @@ namespace SystemExpert.MainForms
             this.Close();
         }
 
+        private void RapForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            mainform.Show();
+        }
     }
 }

@@ -158,6 +158,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RockForm";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RockForm_FormClosed);
             this.question1_groupBox.ResumeLayout(false);
             this.question1_groupBox.PerformLayout();
             this.question2_groupBox.ResumeLayout(false);

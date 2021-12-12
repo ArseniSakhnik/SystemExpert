@@ -17,5 +17,10 @@ namespace SystemExpert.RapForms
             InitializeComponent();
             mainform = t_mainform;
         }
+
+        private void Trap_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            mainform.Show();
+        }
     }
 }

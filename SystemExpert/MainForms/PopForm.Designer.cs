@@ -145,6 +145,7 @@ namespace SystemExpert.MainForms
             this.Controls.Add(this.question2_groupBox);
             this.Name = "PopForm";
             this.Text = "PopForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PopForm_FormClosed);
             this.question2_groupBox.ResumeLayout(false);
             this.question2_groupBox.PerformLayout();
             this.question1_groupBox.ResumeLayout(false);

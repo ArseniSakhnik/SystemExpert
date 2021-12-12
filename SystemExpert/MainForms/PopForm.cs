@@ -52,5 +52,10 @@ namespace SystemExpert.MainForms
             trance.Show();
             this.Close();
         }
+
+        private void PopForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            mainform.Show();
+        }
     }
 }

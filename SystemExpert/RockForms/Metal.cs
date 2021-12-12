@@ -16,5 +16,10 @@ namespace SystemExpert
             InitializeComponent();
             //mainform.Show();
         }
+
+        private void Metal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            mainform.Show();
+        }
     }
 }

@@ -17,5 +17,10 @@ namespace SystemExpert.PopForms
             InitializeComponent();
             mainform = t_mainform;
         }
+
+        private void House_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            mainform.Show();
+        }
     }
 }

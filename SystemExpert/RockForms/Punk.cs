@@ -17,5 +17,17 @@ namespace SystemExpert
             InitializeComponent();
             mainform = t_mainform;
         }
+
+
+        /// <summary>
+        /// Закрываем форму и отображаем главную
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Punk_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            mainform.Show();
+        }
     }
+
 }
