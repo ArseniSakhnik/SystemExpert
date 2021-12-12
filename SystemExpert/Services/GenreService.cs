@@ -889,7 +889,7 @@ namespace SystemExpert.Services
             },
         };
 
-        public static List<Genre> CurrentGenres = null;
+        public static List<Genre> CurrentGenres;
         
         public static void SetCurrentGenre(GenresTypeEnum genreTypeId)
         {
@@ -934,6 +934,13 @@ namespace SystemExpert.Services
                 Feature.ЛюбовьКИскусству => "Любовь к искусству",
                 _ => throw new ArgumentOutOfRangeException(nameof(feature), feature, null)
             };
+        }
+
+        public static List<string> GetCurrentGenreNames()
+        {
+            return CurrentGenres
+                .Select(genre => genre.Name)
+                .ToList();
         }
     }
 }
