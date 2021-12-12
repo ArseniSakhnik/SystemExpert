@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using SystemExpert.Entities;
 using SystemExpert.Enums;
 
@@ -905,6 +906,34 @@ namespace SystemExpert.Services
                 GenresTypeEnum.Трэп => TrapGenres,
                 _ => throw new ArgumentOutOfRangeException(nameof(genreTypeId), genreTypeId, null)
             };
-        }   
+        }
+
+        public static List<string> GetCurrentGenreFeatures()
+        {
+            return CurrentGenres
+                .Select(genre => GetFeatureString(genre.FeatureId))
+                .ToList();
+        }
+
+        private static string GetFeatureString(Feature feature)
+        {
+            return feature switch
+            {
+                Feature.Грустная => "Грустная",
+                Feature.Нет => "Нет",
+                Feature.Расслабляющая => "Расслабляющая",
+                Feature.Искаженная => "Искаженная",
+                Feature.Классика => "Классика",
+                Feature.Разнообразная => "Разнообразная",
+                Feature.Народная => "Народная",
+                Feature.Экстрим => "Экстрим",
+                Feature.Политика => "Политика",
+                Feature.Страшная => "Страшная",
+                Feature.Искусство => "Искусство",
+                Feature.Карикатура => "Карикатура",
+                Feature.ЛюбовьКИскусству => "Любовь к искусству",
+                _ => throw new ArgumentOutOfRangeException(nameof(feature), feature, null)
+            };
+        }
     }
 }
