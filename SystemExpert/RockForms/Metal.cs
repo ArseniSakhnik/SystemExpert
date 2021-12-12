@@ -11,10 +11,11 @@ namespace SystemExpert
 {
     public partial class Metal : Form
     {
-        public Metal(MainForm mainform)
+        private readonly MainForm mainform;
+        public Metal(MainForm t_mainform)
         {
             InitializeComponent();
-            //mainform.Show();
+            mainform = t_mainform;
         }
 
         private void Metal_FormClosed(object sender, FormClosedEventArgs e)

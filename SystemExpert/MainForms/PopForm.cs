@@ -55,7 +55,8 @@ namespace SystemExpert.MainForms
 
         private void PopForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            mainform.Show();
+            //mainform.Show(); // идея не оч, так как главная форма вызывается всегда при закрытии,
+                               // а не только при нажатии на крестик
         }
     }
 }

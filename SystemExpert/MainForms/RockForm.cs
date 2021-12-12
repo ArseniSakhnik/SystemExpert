@@ -67,7 +67,8 @@ namespace SystemExpert
 
         private void RockForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            mainform.Show();
+            //mainform.Show(); // идея не оч, так как главная форма вызывается всегда при закрытии,
+                               // а не только при нажатии на крестик
         }
     }
 }
