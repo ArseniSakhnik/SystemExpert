@@ -7,15 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SystemExpert.MainForms;
 
 namespace SystemExpert
 {
     public partial class RockForm : Form
     {
-        public RockForm()
+        private readonly MainForm mainform;
+        public RockForm(MainForm t_mainform)
         {
             InitializeComponent();
             start_form();
+            mainform = t_mainform;
         }
 
         /// <summary>
@@ -37,8 +40,9 @@ namespace SystemExpert
 
         private void question1_YES_Click(object sender, EventArgs e)
         {
-            Metal metal = new Metal();
+            Metal metal = new Metal(mainform);            
             metal.Show();
+            this.Close();
         }
 
         private void question1_NO_Click(object sender, EventArgs e)
@@ -49,14 +53,16 @@ namespace SystemExpert
 
         private void question2_YES_Click(object sender, EventArgs e)
         {
-            Punk punk = new Punk();
+            Punk punk = new Punk(mainform);
             punk.Show();
+            this.Close();
         }
 
         private void question2_NO_Click(object sender, EventArgs e)
         {
-            Alt alt = new Alt();
+            Alt alt = new Alt(mainform);
             alt.Show();
+            this.Close();
         }
     }
 }

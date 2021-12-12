@@ -5,14 +5,17 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using SystemExpert.MainForms;
 
 namespace SystemExpert
 {
     public partial class Punk : Form
     {
-        public Punk()
+        private readonly MainForm mainform;
+        public Punk(MainForm t_mainform)
         {
             InitializeComponent();
+            mainform = t_mainform;
         }
     }
 }

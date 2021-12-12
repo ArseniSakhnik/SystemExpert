@@ -11,10 +11,12 @@ namespace SystemExpert.MainForms
 {
     public partial class RapForm : Form
     {
-        public RapForm()
+        private readonly MainForm mainform;
+        public RapForm(MainForm t_mainform)
         {
             InitializeComponent();
             start_form();
+            mainform = t_mainform;
         }
 
         /// <summary>
@@ -29,8 +31,9 @@ namespace SystemExpert.MainForms
 
         private void question1_YES_Click(object sender, EventArgs e)
         {
-            Regional regional = new Regional();
+            Regional regional = new Regional(mainform);
             regional.Show();
+            this.Close();
         }
 
         private void question1_NO_Click(object sender, EventArgs e)
@@ -40,14 +43,16 @@ namespace SystemExpert.MainForms
         }
         private void question2_YES_Click(object sender, EventArgs e)
         {
-            HardCore hardcore = new HardCore();
+            HardCore hardcore = new HardCore(mainform);
             hardcore.Show();
+            this.Close();
         }
 
         private void question2_NO_Click(object sender, EventArgs e)
         {
-            Trap trap = new Trap();
+            Trap trap = new Trap(mainform);
             trap.Show();
+            this.Close();
         }
 
     }

@@ -5,14 +5,17 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using SystemExpert.MainForms;
 
 namespace SystemExpert.RapForms
 {
     public partial class HardCore : Form
     {
-        public HardCore()
+        private readonly MainForm mainform;
+        public HardCore(MainForm t_mainform)
         {
             InitializeComponent();
+            mainform = t_mainform;
         }
     }
 }

@@ -141,8 +141,8 @@ namespace SystemExpert.MainForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 450);
             this.Controls.Add(this.Question);
-            this.Controls.Add(this.question1_groupBox);
             this.Controls.Add(this.question2_groupBox);
+            this.Controls.Add(this.question1_groupBox);
             this.Name = "RapForm";
             this.Text = "RapForm";
             this.question2_groupBox.ResumeLayout(false);

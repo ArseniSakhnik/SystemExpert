@@ -5,14 +5,17 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using SystemExpert.MainForms;
 
 namespace SystemExpert.RapForms
 {
     public partial class Regional : Form
     {
-        public Regional()
+        private readonly MainForm mainform;
+        public Regional(MainForm t_mainform)
         {
             InitializeComponent();
+            mainform = t_mainform;
         }
     }
 }

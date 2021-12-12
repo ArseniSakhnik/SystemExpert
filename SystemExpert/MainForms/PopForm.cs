@@ -11,10 +11,12 @@ namespace SystemExpert.MainForms
 {
     public partial class PopForm : Form
     {
-        public PopForm()
+        private readonly MainForm mainform;
+        public PopForm(MainForm t_mainform)
         {
             InitializeComponent();
             start_form();
+            mainform = t_mainform;
         }
 
         private void start_form()
@@ -26,8 +28,9 @@ namespace SystemExpert.MainForms
 
         private void question1_YES_Click(object sender, EventArgs e)
         {
-            Disco disco = new Disco();
+            Disco disco = new Disco(mainform);
             disco.Show();
+            this.Close();
         }
 
         private void question1_NO_Click(object sender, EventArgs e)
@@ -38,14 +41,16 @@ namespace SystemExpert.MainForms
 
         private void question2_YES_Click(object sender, EventArgs e)
         {
-            House house = new House();
+            House house = new House(mainform);
             house.Show();
+            this.Close();
         }
 
         private void question2_NO_Click(object sender, EventArgs e)
         {
-            Trance trance = new Trance();
+            Trance trance = new Trance(mainform);
             trance.Show();
+            this.Close();
         }
     }
 }
