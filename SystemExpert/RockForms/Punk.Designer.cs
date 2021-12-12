@@ -89,7 +89,7 @@ namespace SystemExpert
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(235, 68);
+            this.linkLabel1.Location = new System.Drawing.Point(328, 68);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(76, 20);
             this.linkLabel1.TabIndex = 5;
@@ -99,7 +99,7 @@ namespace SystemExpert
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(235, 130);
+            this.linkLabel2.Location = new System.Drawing.Point(328, 130);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(76, 20);
             this.linkLabel2.TabIndex = 6;
@@ -109,7 +109,7 @@ namespace SystemExpert
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(235, 191);
+            this.linkLabel3.Location = new System.Drawing.Point(328, 191);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(76, 20);
             this.linkLabel3.TabIndex = 7;
@@ -119,7 +119,7 @@ namespace SystemExpert
             // linkLabel4
             // 
             this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(235, 255);
+            this.linkLabel4.Location = new System.Drawing.Point(328, 255);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(76, 20);
             this.linkLabel4.TabIndex = 8;
@@ -129,7 +129,7 @@ namespace SystemExpert
             // linkLabel5
             // 
             this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Location = new System.Drawing.Point(235, 313);
+            this.linkLabel5.Location = new System.Drawing.Point(328, 313);
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.Size = new System.Drawing.Size(76, 20);
             this.linkLabel5.TabIndex = 9;
