@@ -16,6 +16,20 @@ namespace SystemExpert
         {
             InitializeComponent();
             mainform = t_mainform;
+            string[] types = GetTypesForPunk();
+            string[] genres = GetGenresForPunk();
+
+            label1.Text = types[0];
+            label2.Text = types[1];
+            label3.Text = types[2];
+            label4.Text = types[3];
+            label5.Text = types[4];
+
+            linkLabel1.Text = genres[0];
+            linkLabel2.Text = genres[1];
+            linkLabel3.Text = genres[2];
+            linkLabel4.Text = genres[3];
+            linkLabel5.Text = genres[4];
         }
 
 
